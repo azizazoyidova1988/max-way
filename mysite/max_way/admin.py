@@ -5,5 +5,6 @@ admin.site.register(Category)
 admin.site.register(Product)
 admin.site.register(Order)
 admin.site.register(User)
+admin.site.register(MinImage)
 
 

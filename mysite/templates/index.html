@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Max_way</title>
-    <link rel="stylesheet" href="{% static 'max_way/css/style.css' %}">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body> 
     <div class="mobMenu"> 
@@ -34,7 +33,7 @@
           <button class="main"> <span></span></button>
         </div>
         <div class="mobMenu__content"> 
-          <div class="mobMenu__content--img"> <img src="{% static 'max_way/img/bitmap.png ' %}" alt=""></div>
+          <div class="mobMenu__content--img"> <img src="assets/img/bitmap.png" alt=""></div>
           <div class="mobMenu__content--decs">
             <div class="mobMenu__content--title">Siz izlagan mazzali ta’mlar</div>
             <div class="mobMenu__content--text">When an unknown printer took a galley of type scrambled it to make a type specimen </div>
@@ -44,13 +43,34 @@
       <button class="fixed--icon" onclick="modal()">
          <svg width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 7V5C4 2.23858 6.23858 0 9 0C11.7614 0 14 2.23858 14 5V7H17C17.5523 7 18 7.44772 18 8V20C18 20.5523 17.5523 21 17 21H1C0.447715 21 0 20.5523 0 20V8C0 7.44772 0.447715 7 1 7H4ZM4 9H2V19H16V9H14V11H12V9H6V11H4V9ZM12 5V7H6V5C6 3.34315 7.34315 2 9 2C10.6569 2 12 3.34315 12 5Z" fill="#F1B301"/></svg></button>
       <div class="main__menu">
-
+        <ul> 
+          <li class="list"><a href="#">Menyu  </a></li>
+          <li class="list"><a href="#">Bolalar uchun</a></li>
+          <li class="list"><a href="#">Filiallar</a></li>
+          <li class="list"><a href="tel:998712005400">(+99871) 200-54-00</a></li>
+          <div class="net__icon"> <a href="#">
+               <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M20 8C20 8 20 4.28 19.543 2.498C19.292 1.516 18.55 0.742 17.605 0.476C15.896 0 10 0 10 0C10 0 4.107 0 2.395 0.476C1.454 0.738 0.711 1.513 0.457 2.498C0 4.28 0 8 0 8C0 8 0 11.72 0.457 13.502C0.708 14.484 1.45 15.258 2.395 15.524C4.107 16 10 16 10 16C10 16 15.896 16 17.605 15.524C18.546 15.262 19.289 14.487 19.543 13.502C20 11.72 20 8 20 8ZM14 8L8 11.5V4.5L14 8Z" fill="#222124"/>
+</svg></a><a href="#">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 0C4.477 0 0 4.477 0 10C0 14.991 3.657 19.128 8.438 19.879V12.89H5.898V10H8.438V7.797C8.438 5.291 9.93 3.907 12.215 3.907C13.309 3.907 14.453 4.102 14.453 4.102V6.562H13.193C11.95 6.562 11.563 7.333 11.563 8.124V10H14.336L13.893 12.89H11.563V19.879C16.343 19.129 20 14.99 20 10C20 4.477 15.523 0 10 0Z" fill="#222124"/>
+</svg></a><a href="#">
+               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M14.122 0.06C13.056 0.01 12.717 0 10 0C7.283 0 6.944 0.013 5.878 0.06C4.812 0.11 4.088 0.277 3.45 0.525C2.78243 0.775729 2.17767 1.16923 1.678 1.678C1.1688 2.17732 0.775236 2.78218 0.525 3.45C0.277 4.088 0.11 4.812 0.06 5.878C0.01 6.944 0 7.283 0 10C0 12.717 0.013 13.056 0.06 14.122C0.11 15.187 0.277 15.913 0.525 16.55C0.775931 17.2175 1.16941 17.8222 1.678 18.322C2.17753 18.8309 2.78233 19.2245 3.45 19.475C4.088 19.722 4.813 19.89 5.878 19.94C6.944 19.99 7.283 20 10 20C12.717 20 13.056 19.987 14.122 19.94C15.187 19.89 15.913 19.722 16.55 19.475C17.2173 19.2238 17.822 18.8303 18.322 18.322C18.8311 17.8226 19.2247 17.2178 19.475 16.55C19.722 15.912 19.89 15.187 19.94 14.122C19.99 13.056 20 12.717 20 10C20 7.283 19.987 6.944 19.94 5.878C19.89 4.813 19.722 4.087 19.475 3.45C19.224 2.78259 18.8305 2.1779 18.322 1.678C17.766 1.123 17.21 0.779 16.55 0.525C15.912 0.277 15.187 0.11 14.122 0.06ZM5 10C5 7.23858 7.23858 5 10 5C12.7614 5 15 7.23858 15 10C15 12.7614 12.7614 15 10 15C7.23858 15 5 12.7614 5 10ZM16.5 4.75C16.5 4.05964 15.9404 3.5 15.25 3.5C14.5596 3.5 14 4.05964 14 4.75C14 5.44036 14.5596 6 15.25 6C15.9404 6 16.5 5.44036 16.5 4.75ZM13 10C13 8.34315 11.6569 7 10 7C8.34315 7 7 8.34315 7 10C7 11.6569 8.34315 13 10 13C11.6569 13 13 11.6569 13 10Z" fill="#222124"/>
+</svg></a><a href="#">
+               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 15.523 4.477 20 10 20C15.523 20 20 15.523 20 10C20 4.477 15.523 0 10 0C4.477 0 0 4.477 0 10ZM6.903 11.163L6.89 11.17V11.171L4.393 10.391C3.853 10.226 3.849 9.854 4.513 9.588L14.246 5.828C14.811 5.596 15.131 5.888 14.948 6.616L13.291 14.438C13.175 14.994 12.84 15.127 12.374 14.87L9.824 12.982L8.636 14.13C8.63155 14.1343 8.62713 14.1385 8.62273 14.1427C8.50572 14.2552 8.4072 14.3499 8.226 14.374C8.039 14.4 7.885 14.344 7.773 14.033L6.903 11.163Z" fill="#222124"/>
+</svg></a><a href="#">
+               <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.2619 0H16.7381C17.9853 0 19 1.01469 19 2.2619V16.7381C19 17.9853 17.9853 19 16.7381 19H2.2619C1.01469 19 0 17.9853 0 16.7381V2.2619C0 1.01469 1.01469 0 2.2619 0ZM14.6191 8.30481C14.7234 8.30434 14.8275 8.29906 14.9313 8.28898H14.9331V6.17636C13.2977 6.0568 11.9827 4.78299 11.8112 3.15219H9.99264L9.97364 12.0161C9.97364 13.1037 9.01324 13.9605 7.92571 13.9605C6.8384 13.9605 5.95695 13.079 5.95695 11.9917C5.95695 10.9044 6.8384 10.023 7.92571 10.023C7.98626 10.023 8.04481 10.031 8.1034 10.039C8.12361 10.0417 8.14382 10.0445 8.16412 10.0469V8.14602C8.14532 8.14484 8.12654 8.14353 8.10776 8.14222C8.04746 8.13802 7.98711 8.13381 7.92571 8.13381C5.7953 8.13381 4.06826 9.86085 4.06826 11.9913C4.06826 14.1217 5.7953 15.8487 7.92571 15.8487C10.0561 15.8487 11.7832 14.1217 11.7832 11.9913V6.77214C12.4095 7.72867 13.4758 8.30497 14.6191 8.30481Z" fill="#222124"/>
+</svg></a></div>
+        </ul>
       </div>
     </div>
     <div class="header">
       <div class="container"> 
         <div class="menu"> 
-          <div class="logo"><a href="{% url 'home' %}">
+          <div class="logo"><a href="index.html">
                <svg width="52" height="55" viewBox="0 0 52 55" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M31.8607 53.4586C31.8607 53.3384 31.9744 53.2477 32.0913 53.2477H32.2117L32.3453 52.7C32.3754 52.5959 32.4622 52.543 32.5759 52.543C32.6795 52.553 32.7798 52.6396 32.7763 52.7462C32.7763 52.753 32.7763 52.7731 32.7696 52.7899L32.6593 53.2477H32.8131L32.9468 52.7C32.9768 52.5959 33.0637 52.543 33.1774 52.543C33.2909 52.553 33.3846 52.6429 33.3778 52.753C33.3778 52.763 33.3746 52.7765 33.3711 52.7899L33.2608 53.2477C33.3746 53.2511 33.4849 53.3418 33.4849 53.4586C33.4849 53.5787 33.3846 53.6719 33.2542 53.6719H33.1607L33.1272 53.7996H33.154C33.2709 53.7996 33.3846 53.8928 33.3846 54.013C33.3846 54.1331 33.2843 54.2272 33.154 54.2272H33.027L32.8933 54.7816C32.8632 54.8849 32.7763 54.9386 32.6627 54.9386C32.5491 54.9319 32.4588 54.842 32.4588 54.7312L32.4656 54.7018L32.5792 54.2272H32.4255L32.2917 54.7816C32.2616 54.8849 32.1748 54.9386 32.0612 54.9386C31.9542 54.9286 31.8574 54.842 31.8574 54.7312L31.864 54.7018L31.9776 54.2272C31.8541 54.2204 31.7605 54.1297 31.7605 54.013C31.7605 53.8928 31.8741 53.7996 31.991 53.7996H32.0779L32.1113 53.6719H32.0913C31.9609 53.6719 31.8607 53.5787 31.8607 53.4586ZM32.7128 53.6719H32.5592L32.5257 53.7996H32.6795L32.7128 53.6719Z" fill="#800A7A"/>
 <path d="M34.2733 53.9498H34.905C35.0352 53.9498 35.1355 53.8557 35.1355 53.7356C35.1355 53.6155 35.0219 53.5247 34.905 53.5247H34.2733V52.9838H34.9683C35.0953 52.9838 35.2023 52.8973 35.2023 52.7763C35.2023 52.6595 35.0953 52.5596 34.9683 52.5596H34.0628C33.9157 52.5596 33.8054 52.6797 33.8054 52.7965V54.7352C33.8054 54.8486 33.9091 54.9485 34.0394 54.9485C34.1665 54.9485 34.2733 54.8486 34.2733 54.7352V53.9498Z" fill="#800A7A"/>
@@ -70,7 +90,11 @@
 <path fill-rule="evenodd" clip-rule="evenodd" d="M51.4855 28.6927L49.8106 27.1941C45.8064 24.1903 38.7835 25.0798 32.2675 26.9253C27.1736 28.3684 23.7941 30.6465 20.3917 31.8687C18.8951 32.3534 17.0192 32.0711 16.5261 30.6112C16.1058 29.3672 16.3209 28.3995 17.7664 27.4453C22.9105 24.0466 50.2582 17.2327 51.4855 28.6927Z" fill="#F1B301"/>
 </svg></a></div>
           <div class="menu__ul"> 
-
+            <ul> 
+              <li class="list"><a href="index.html">Menyu  </a></li>
+              <li class="list"><a href="index.html">Bolalar uchun</a></li>
+              <li class="list"><a href="index.html">Filiallar</a></li>
+            </ul>
             <div class="phone--shop">
               <div class="phone"> 
                 <div class="phone--icon">
@@ -92,10 +116,8 @@
             <div class="header__content--title">Siz izlagan mazzali ta’mlar</div>
             <div class="header__content--text">When an unknown printer took a galley of type scrambled it to make a type specimen </div>
           </div>
-          <div class="header__content--img"> <img src="{% static 'max_way/img/bitmap.png' %}" alt=""></div>
+          <div class="header__content--img"> <img src="assets/img/bitmap.png" alt=""></div>
         </div>
-
-<!--    Menu analitikasi    -->
         <div class="header__card"> 
           <div class="row"> 
             <div class="col-3 col-md-12 col-xs-12"> 
@@ -107,7 +129,7 @@
 </svg>Yangi
                     </div>
                     <div class="box__text"> Pit<span>-sa</span></div>
-                    <div class="box__img"> <img src="{% static 'max_way/img/pict1.png' %}" alt=""></div>
+                    <div class="box__img"> <img src="assets/img/pict1.png" alt=""></div>
                   </div></a></div>
             </div>
             <div class="col-3 col-md-12 col-xs-12"> 
@@ -115,201 +137,359 @@
                   <div class="box"> 
                     <div class="raiting">
                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<path d="M0 20.4H20V0.4H0V20.4Z" fill="url(#pattern0)"/>
-                         <defs>
-                     <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                       <use xlink:href="#image0" transform="scale(0.015625)"/>
-                     </pattern>
-                     <image id="image0" width="64" height="64" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaX
-                     HeAAAZDElEQVR4Ae2ZBXgc192v3zMzu7O8K5YsWcaaMWQHHYY6zMz03Vu4bVJOmzJzyszcJMXEYYc
-                     Z7Zhly5bFyzs7POeOV/b3uIyBD97n+Z2jRek9//85WuB/+R+Oxn9DrnzDu9u0iD4jEktORdMmx9O5
-                     nKJFpFkzxivFwprtW7Y/AhgA2lGnvp7/DnSng7Z4U2tPPJtdHE1kl2vx5EJVT/YokViTEtVjihqRe
-                     tY1iY5si43Wblm7YegzQEVMPeBq/qvyjesPyX74s988YL8TznzdtH0OOVTPNDf5SoyaFVA1bUzbwQ
-                     9AKBpxPUoyHgXXYePTz7D6rgdXDRcrl2oFV/2v1+LLgpaWlubr8sSvvOa6N7cRT2MmNJymSQyOGIz
-                     lS1RqdQIpiYXimWQoH0sQTURwaj62D0o6d5xw/LM0kUzyX4Vr97Was03NN/bOeM15Xb3T2tATuIGg
-                     XKlhDm6hf/1GCs37Mly28dyAuB4hqSdIphKkMxE0oFCpUatb+JEIXjTSq4UDr3bevJ8T0eOJt85cf
-                     NA1vXPmT9YSGcp1m8p4HqNSIl+sMLkjvK60hdr2e9Fz++LH0sQTUdLpBNlQPhFTcQwb06zjSokjNH
-                     wRiWvhwKuZd6wQ505duP+7XtPduyC1qQ/zW9/BGBtHtLZSX7CEfFMzUgSs3biVVCbHnCZBa+UFxr
-                     L7I7LtNGcgl9XQFYlvAeFs+QFWIJFSooUDr0ZuOMTvTPdO++ABqn7FzFX3suGOVdzft5Ei0A4chs6yhbN58vi
-                     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
-  gg=="/>
-      </defs>
+<path d="M0 20.4H20V0.4H0V20.4Z" fill="url(#pattern0)"/><defs><pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1"><use xlink:href="#image0" transform="scale(0.015625)"/></pattern><image id="image0" width="64" height="64" xlink:href="data:image/png;base64,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"/></defs>
 </svg>Ko’p sotilgan
                     </div>
                     <div class="box__text"> Kom<span>-bo</span></div>
-                    <div class="box__img"> <img src="{% static 'max_way/img/pict2.png' %}" alt=""></div>
+                    <div class="box__img"> <img src="assets/img/pict2.png" alt=""></div>
                   </div></a></div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-
-<!-- Order -->
     <div class="modal"> 
       <div class="title">Заказы</div>
       <button class="close" onclick="modal()"><span></span></button>
-        <div id="order-list">
-
+      <div class="row"> 
+        <div class="col-12"> 
+          <div class="item">
+            <div class="box"> 
+              <div class="box__img"> <img class="img" src="assets/img/burger.png" alt=""></div>
+              <div class="box__content">
+                <div class="box__title"> Double Burger</div>
+                <div class="box__text"> Горячая закуска с митболами из говядины, томатами, моцареллой и соусом чипотле</div>
+                <div class="box__const">
+                  <div class="box__cost"> 23,000 UZS</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
       <div class="total"> 
         <div class="title">Итого:</div>
         <div class="cost">23,500 <span>UZS</span></div>
       </div>
       <div class="buttons">
-        <button class="clear" data-id="delete_orders()"> Очистит</button>
-        <button class="order"><a href="{% url 'order' %}"> Заказать</a></button>
+        <button class="clear"><a href="index.html"> Очистить</a></button>
+        <button class="order"><a href="order.html"> Заказать</a></button>
       </div>
     </div>
-
     <div class="content"> 
       <div class="container"> 
-        <div class="filter">
-            <button data-id="all" class="active">Barchasi</button>
-          {%for category in categories%}
-             <button data-id="category_{{category.id}}">{{category.name}}</button>
-          {% endfor %}
-
-
+        <div class="filter"> 
+          <button class="active" data-id="all">Barchasi</button>
+          <button data-id="pitsa">Pitsa</button>
+          <button data-id="burger">Burger</button>
+          <button data-id="kombo">Kombo</button>
+          <button data-id="salat">Salat</button>
+          <button data-id="sweets">Shirinliklar</button>
+          <button data-id="drinks">Ichimliklar</button>
+          <button class="filt">
+             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.14166 2.33338C4.49449 1.33341 5.4396 0.664673 6.49999 0.664673C7.56038 0.664673 8.50549 1.33341 8.85832 2.33338H17.3333V4.00005H8.85832C8.50549 5.00002 7.56038 5.66876 6.49999 5.66876C5.4396 5.66876 4.49449 5.00002 4.14166 4.00005H0.666656V2.33338H4.14166ZM11.5 6.49801C10.4396 6.49801 9.49449 7.16675 9.14166 8.16672H0.666656V9.83338H9.14166C9.49449 10.8333 10.4396 11.5021 11.5 11.5021C12.5604 11.5021 13.5055 10.8333 13.8583 9.83338H17.3333V8.16672H13.8583C13.5055 7.16675 12.5604 6.49801 11.5 6.49801ZM6.49999 12.3313C5.4396 12.3313 4.49449 13.0001 4.14166 14H0.666656V15.6667H4.14166C4.49449 16.6667 5.4396 17.3354 6.49999 17.3354C7.56038 17.3354 8.50549 16.6667 8.85832 15.6667H17.3333V14H8.85832C8.50549 13.0001 7.56038 12.3313 6.49999 12.3313ZM7.33332 3.16671C7.33332 3.62695 6.96023 4.00005 6.49999 4.00005C6.03975 4.00005 5.66666 3.62695 5.66666 3.16671C5.66666 2.70648 6.03975 2.33338 6.49999 2.33338C6.96023 2.33338 7.33332 2.70648 7.33332 3.16671ZM11.5 9.83338C11.9602 9.83338 12.3333 9.46029 12.3333 9.00005C12.3333 8.53981 11.9602 8.16672 11.5 8.16672C11.0398 8.16672 10.6667 8.53981 10.6667 9.00005C10.6667 9.46029 11.0398 9.83338 11.5 9.83338ZM7.33332 14.8334C7.33332 15.2936 6.96023 15.6667 6.49999 15.6667C6.03975 15.6667 5.66666 15.2936 5.66666 14.8334C5.66666 14.3731 6.03975 14 6.49999 14C6.96023 14 7.33332 14.3731 7.33332 14.8334Z" fill="black"/>
+</svg>Filtr
+          </button>
         </div>
-
-
-<!--        Pitsa menu-->
-        <div class="slide">
-          {% for category in categories %}
-          <div class="big__title category_{{category.id}}">{{category.name}}</div>
-          <div class="row category_{{category.id}}">
-              {% for product in products %}
-              {% if category.id == product.category_id %}
-            <div class="col-6 col-md-12 col-xs-12">
-              <div class="item category_{{category.id}}">
-                <div class="box">
-                  <div class="box__img">  <img class="img" src="/media/{{product.image}}" alt=""/>
-<!--                    <div class="img__hot"><img class="hot" src="{% static 'max_way/img/hot.svg' %}" alt=""/></div>-->
+        <div class="mob__button">
+          <button class="mobFilt">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.14166 2.33338C4.49449 1.33341 5.4396 0.664673 6.49999 0.664673C7.56038 0.664673 8.50549 1.33341 8.85832 2.33338H17.3333V4.00005H8.85832C8.50549 5.00002 7.56038 5.66876 6.49999 5.66876C5.4396 5.66876 4.49449 5.00002 4.14166 4.00005H0.666656V2.33338H4.14166ZM11.5 6.49801C10.4396 6.49801 9.49449 7.16675 9.14166 8.16672H0.666656V9.83338H9.14166C9.49449 10.8333 10.4396 11.5021 11.5 11.5021C12.5604 11.5021 13.5055 10.8333 13.8583 9.83338H17.3333V8.16672H13.8583C13.5055 7.16675 12.5604 6.49801 11.5 6.49801ZM6.49999 12.3313C5.4396 12.3313 4.49449 13.0001 4.14166 14H0.666656V15.6667H4.14166C4.49449 16.6667 5.4396 17.3354 6.49999 17.3354C7.56038 17.3354 8.50549 16.6667 8.85832 15.6667H17.3333V14H8.85832C8.50549 13.0001 7.56038 12.3313 6.49999 12.3313ZM7.33332 3.16671C7.33332 3.62695 6.96023 4.00005 6.49999 4.00005C6.03975 4.00005 5.66666 3.62695 5.66666 3.16671C5.66666 2.70648 6.03975 2.33338 6.49999 2.33338C6.96023 2.33338 7.33332 2.70648 7.33332 3.16671ZM11.5 9.83338C11.9602 9.83338 12.3333 9.46029 12.3333 9.00005C12.3333 8.53981 11.9602 8.16672 11.5 8.16672C11.0398 8.16672 10.6667 8.53981 10.6667 9.00005C10.6667 9.46029 11.0398 9.83338 11.5 9.83338ZM7.33332 14.8334C7.33332 15.2936 6.96023 15.6667 6.49999 15.6667C6.03975 15.6667 5.66666 15.2936 5.66666 14.8334C5.66666 14.3731 6.03975 14 6.49999 14C6.96023 14 7.33332 14.3731 7.33332 14.8334Z" fill="black"/>
+</svg>Filtr
+          </button>
+        </div>
+        <div class="slide"> 
+          <div class="big__title pitsa">Pitsa</div>
+          <div class="row pitsa"> 
+            <div class="col-6 col-md-12 col-xs-12"> 
+              <div class="item pizza">
+                <div class="box"> 
+                  <div class="box__img">  <img class="img" src="assets/img/pitza1.png" alt=""/>
+                    <div class="img__hot"><img class="hot" src="assets/img/hot.svg" alt=""/></div>
                   </div>
-                  <div class="box__content">
-                    <div class="box__title">{{product.name}}
-<!--                        <img src="{% static 'max_way/img/chesse.svg' %}" alt=""/>-->
-                    </div>
-                    <div class="box__text">{{product.description}}</div>
+                  <div class="box__content"> 
+                    <div class="box__title">Gavaya<img src="assets/img/chesse.svg" alt=""/></div>
+                    <div class="box__text">Горячая закуска с митболами из говядины, томатами, моцареллой и соусом чипотле</div>
                     <div class="cost__btn">
-                      <div class="box__cost">{{product.price}} UZS</div>
-                      <button class="box__btn" onclick="add_product_to_order({{product.id}})"> <img src="{% static 'max_way/img/plus.png' %}" alt=""/></button>
+                      <div class="box__cost">45,000 UZS</div>
+                      <button class="box__btn"> <img src="assets/img/plus.png" alt=""/></button>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-              {% endif %}
-            {% endfor %}
-           </div>
-          <div class="slide__btn pitsa" data-id="category_{{category.id}}">
+            <div class="col-6 col-md-12 col-xs-12"> 
+              <div class="item pizza">
+                <div class="box"> 
+                  <div class="box__img">  <img class="img" src="assets/img/pitza2.png" alt=""/>
+                    <div class="img__hot"><img class="hot" src="assets/img/hot.svg" alt=""/></div>
+                  </div>
+                  <div class="box__content"> 
+                    <div class="box__title">Mexica<img src="assets/img/pepper.svg" alt=""/></div>
+                    <div class="box__text">Горячая закуска с митболами из говядины, томатами, моцареллой и соусом чипотле</div>
+                    <div class="cost__btn">
+                      <div class="box__cost">53,000 UZS</div>
+                      <button class="box__btn"> <img src="assets/img/plus.png" alt=""/></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-12 col-xs-12"> 
+              <div class="item pizza">
+                <div class="box"> 
+                  <div class="box__img">  <img class="img" src="assets/img/pitza3.png" alt=""/></div>
+                  <div class="box__content"> 
+                    <div class="box__title">Hot achchiko<img src="assets/img/sheet.svg" alt=""/></div>
+                    <div class="box__text">Горячая закуска с митболами из говядины, томатами, моцареллой и соусом чипотле</div>
+                    <div class="cost__btn">
+                      <div class="box__cost">64,000 UZS</div>
+                      <button class="box__btn"> <img src="assets/img/plus.png" alt=""/></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-12 col-xs-12"> 
+              <div class="item pizza"> 
+                <div class="box"> 
+                  <div class="box__img">  <img class="img" src="assets/img/pitza4.png" alt=""/></div>
+                  <div class="box__content"> 
+                    <div class="box__title">Mexica</div>
+                    <div class="box__text">Горячая закуска с митболами из говядины, томатами, моцареллой и соусом чипотле</div>
+                    <div class="cost__btn">
+                      <div class="box__cost">45,000 UZS</div>
+                      <button class="box__btn"> <img src="assets/img/plus.png" alt=""/></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-12 col-xs-12"> 
+              <div class="item pizza">
+                <div class="box"> 
+                  <div class="box__img">  <img class="img" src="assets/img/pitza3.png" alt=""/></div>
+                  <div class="box__content"> 
+                    <div class="box__title">Apocalipo<img src="assets/img/pepper.svg" alt=""/></div>
+                    <div class="box__text">Горячая закуска с митболами из говядины, томатами, моцареллой и соусом чипотле</div>
+                    <div class="cost__btn">
+                      <div class="box__cost">64,000 UZS</div>
+                      <button class="box__btn"> <img src="assets/img/plus.png" alt=""/></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-12 col-xs-12"> 
+              <div class="item pizza">
+                <div class="box"> 
+                  <div class="box__img">  <img class="img" src="assets/img/pitza4.png" alt=""/></div>
+                  <div class="box__content"> 
+                    <div class="box__title">Sosiskacho<img src="assets/img/sheet.svg" alt=""/></div>
+                    <div class="box__text">Горячая закуска с митболами из говядины, томатами, моцареллой и соусом чипотле</div>
+                    <div class="cost__btn">
+                      <div class="box__cost">45,000 UZS</div>
+                      <button class="box__btn"> <img src="assets/img/plus.png" alt=""/></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-12 col-xs-12"> 
+              <div class="item pizza"> 
+                <div class="box"> 
+                  <div class="box__img">  <img class="img" src="assets/img/pitza2.png" alt=""/></div>
+                  <div class="box__content"> 
+                    <div class="box__title">Mexica</div>
+                    <div class="box__text">Горячая закуска с митболами из говядины, томатами, моцареллой и соусом чипотле</div>
+                    <div class="cost__btn">
+                      <div class="box__cost">53,000 UZS</div>
+                      <button class="box__btn"> <img src="assets/img/plus.png" alt=""/></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide__btn pitsa" data-id="pitsa"> 
             <button>Ko‘proq ko‘rish</button>
           </div>
-            {% endfor %}
+          <div class="big__title burger">Burger</div>
+          <div class="row burger"> 
+            <div class="col-6 col-md-12 col-xs-12"> 
+              <div class="item burger">
+                <div class="box"> 
+                  <div class="box__img">  <img class="img" src="assets/img/burger.png" alt=""/>
+                    <div class="img__hot"><img class="hot" src="assets/img/hot.svg" alt=""/></div>
+                  </div>
+                  <div class="box__content"> 
+                    <div class="box__title">Cheeseburger<img src="assets/img/chesse.svg" alt=""/></div>
+                    <div class="box__text">Горячая закуска с митболами из говядины, томатами, моцареллой и соусом чипотле</div>
+                    <div class="cost__btn">
+                      <div class="box__cost">23,000 UZS</div>
+                      <button class="box__btn"> <img src="assets/img/plus.png" alt=""/></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-12 col-xs-12"> 
+              <div class="item burger">
+                <div class="box"> 
+                  <div class="box__img">  <img class="img" src="assets/img/burger.png" alt=""/></div>
+                  <div class="box__content"> 
+                    <div class="box__title">Chili burger<img src="assets/img/pepper.svg" alt=""/></div>
+                    <div class="box__text">Горячая закуска с митболами из говядины, томатами, моцареллой и соусом чипотле</div>
+                    <div class="cost__btn">
+                      <div class="box__cost">23,000 UZS</div>
+                      <button class="box__btn"> <img src="assets/img/plus.png" alt=""/></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-12 col-xs-12"> 
+              <div class="item burger"> 
+                <div class="box"> 
+                  <div class="box__img">  <img class="img" src="assets/img/burger.png" alt=""/></div>
+                  <div class="box__content"> 
+                    <div class="box__title">Hamburger</div>
+                    <div class="box__text">Горячая закуска с митболами из говядины, томатами, моцареллой и соусом чипотле</div>
+                    <div class="cost__btn">
+                      <div class="box__cost">23,000 UZS</div>
+                      <button class="box__btn"> <img src="assets/img/plus.png" alt=""/></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-12 col-xs-12"> 
+              <div class="item burger"> 
+                <div class="box"> 
+                  <div class="box__img">  <img class="img" src="assets/img/burger.png" alt=""/></div>
+                  <div class="box__content"> 
+                    <div class="box__title">Double Burger</div>
+                    <div class="box__text">Горячая закуска с митболами из говядины, томатами, моцареллой и соусом чипотле</div>
+                    <div class="cost__btn">
+                      <div class="box__cost">23,000 UZS</div>
+                      <button class="box__btn"> <img src="assets/img/plus.png" alt=""/></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide__btn burger" data-id="burger"> 
+            <button>Ko‘proq ko‘rish</button>
+          </div>
+          <div class="big__title kombo">Kombo</div>
+          <div class="row kombo"> 
+            <div class="col-6 col-md-12 col-xs-12"> 
+              <div class="item">
+                <div class="box"> 
+                  <div class="box__img">  <img class="img" src="assets/img/kombo1.png" alt=""/></div>
+                  <div class="box__content"> 
+                    <div class="box__title">Kombo-1</div>
+                    <div class="box__text">Горячая закуска с митболами из говядины, томатами, моцареллой и соусом чипотле</div>
+                    <div class="cost__btn">
+                      <div class="box__cost">25,000 UZS</div>
+                      <button class="box__btn"> <img src="assets/img/plus.png" alt=""/></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-12 col-xs-12"> 
+              <div class="item">
+                <div class="box"> 
+                  <div class="box__img">  <img class="img" src="assets/img/kombo2.png" alt=""/></div>
+                  <div class="box__content"> 
+                    <div class="box__title">Kombo-2</div>
+                    <div class="box__text">Горячая закуска с митболами из говядины, томатами, моцареллой и соусом чипотле</div>
+                    <div class="cost__btn">
+                      <div class="box__cost">23,000 UZS</div>
+                      <button class="box__btn"> <img src="assets/img/plus.png" alt=""/></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-12 col-xs-12"> 
+              <div class="item">
+                <div class="box"> 
+                  <div class="box__img">  <img class="img" src="assets/img/kombo1.png" alt=""/></div>
+                  <div class="box__content"> 
+                    <div class="box__title">Kombo-3</div>
+                    <div class="box__text">Горячая закуска с митболами из говядины, томатами, моцареллой и соусом чипотле</div>
+                    <div class="cost__btn">
+                      <div class="box__cost">30,000 UZS</div>
+                      <button class="box__btn"> <img src="assets/img/plus.png" alt=""/></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide__btn kombo" data-id="kombo"> 
+            <button>Ko‘proq ko‘rish</button>
+          </div>
+          <div class="big__title drinks">Ichimliklar</div>
+          <div class="row drinks"> 
+            <div class="col-6 col-md-12 col-xs-12"> 
+              <div class="item">
+                <div class="box"> 
+                  <div class="box__img">  <img class="img" src="assets/img/sprite.png" alt=""/></div>
+                  <div class="box__content"> 
+                    <div class="box__title">Sprite 1L</div>
+                    <div class="box__text">Горячая закуска с митболами из говядины, томатами, моцареллой и соусом чипотле</div>
+                    <div class="cost__btn">
+                      <div class="box__cost">6,000 UZS</div>
+                      <button class="box__btn"> <img src="assets/img/plus.png" alt=""/></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-12 col-xs-12"> 
+              <div class="item">
+                <div class="box"> 
+                  <div class="box__img">  <img class="img" src="assets/img/cola.png" alt=""/></div>
+                  <div class="box__content"> 
+                    <div class="box__title">Coca cola 1,5L</div>
+                    <div class="box__text">Горячая закуска с митболами из говядины, томатами, моцареллой и соусом чипотле</div>
+                    <div class="cost__btn">
+                      <div class="box__cost">9,000 UZS </div>
+                      <button class="box__btn"> <img src="assets/img/plus.png" alt=""/></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-12 col-xs-12"> 
+              <div class="item">
+                <div class="box"> 
+                  <div class="box__img">  <img class="img" src="assets/img/fanta.png" alt=""/></div>
+                  <div class="box__content"> 
+                    <div class="box__title">Fanta 1L</div>
+                    <div class="box__text">Горячая закуска с митболами из говядины, томатами, моцареллой и соусом чипотле</div>
+                    <div class="cost__btn">
+                      <div class="box__cost">6,000 UZS</div>
+                      <button class="box__btn"> <img src="assets/img/plus.png" alt=""/></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide__btn drinks" data-id="drinks"> 
+            <button>Ko‘proq ko‘rish</button>
+          </div>
         </div>
-
-
       </div>
     </div>
     <div class="mob__pattern"> 
-      <div class="mob__pattern--img"> <img class="phone" src="{% static 'max_way/img/big__phone.png' %}" alt=""></div><img class="path" src="{% static 'img/pathmobile.png' %}" alt="">
+      <div class="mob__pattern--img"> <img class="phone" src="assets/img/big__phone.png" alt=""></div><img class="path" src="assets/img/pathmobile.png" alt="">
       <div class="container"> 
         <div class="mob__pattern--content">
           <div class="big__title">Mobil ilovamiz <br> orqali buyurtma <br> berish yanada osonroq</div>
@@ -380,7 +560,7 @@
         </div>
       </div>
     </div>
-    <div class="pattern"> <img class="path" src="{% static 'max_way/img/path.png' %}" alt="">
+    <div class="pattern"> <img class="path" src="assets/img/path.png" alt="">
       <div class="container"> 
         <div class="pattern__content">
           <div class="big__title">Mobil ilovamiz <br> orqali buyurtma <br> berish yanada osonroq</div>
@@ -404,7 +584,7 @@
           </div>
         </div>
       </div>
-      <div class="pattern__img"> <img class="phone" src="{% static 'max_way/img/big__phone.png' %}" alt=""></div>
+      <div class="pattern__img"> <img class="phone" src="assets/img/big__phone.png" alt=""></div>
     </div>
     <footer class="footer"> 
       <div class="container"> 
@@ -470,45 +650,9 @@
 </svg></a><a href="#">
              <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.2619 0H16.7381C17.9853 0 19 1.01469 19 2.2619V16.7381C19 17.9853 17.9853 19 16.7381 19H2.2619C1.01469 19 0 17.9853 0 16.7381V2.2619C0 1.01469 1.01469 0 2.2619 0ZM14.6191 8.30481C14.7234 8.30434 14.8275 8.29906 14.9313 8.28898H14.9331V6.17636C13.2977 6.0568 11.9827 4.78299 11.8112 3.15219H9.99264L9.97364 12.0161C9.97364 13.1037 9.01324 13.9605 7.92571 13.9605C6.8384 13.9605 5.95695 13.079 5.95695 11.9917C5.95695 10.9044 6.8384 10.023 7.92571 10.023C7.98626 10.023 8.04481 10.031 8.1034 10.039C8.12361 10.0417 8.14382 10.0445 8.16412 10.0469V8.14602C8.14532 8.14484 8.12654 8.14353 8.10776 8.14222C8.04746 8.13802 7.98711 8.13381 7.92571 8.13381C5.7953 8.13381 4.06826 9.86085 4.06826 11.9913C4.06826 14.1217 5.7953 15.8487 7.92571 15.8487C10.0561 15.8487 11.7832 14.1217 11.7832 11.9913V6.77214C12.4095 7.72867 13.4758 8.30497 14.6191 8.30481Z" fill="#222124"/>
-</svg></a>
+</svg></a></div>
       </div>
     </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-    <script src="{% static 'max_way/js/app.js' %}"> </script>
-    <script>
-  function add_product_to_order(product_id){
-    orders = document.getElementById("order-list");
-    total_price = document.getElementById("total_price");
-    home_price = document.getElementById("home_price");
-    $.ajax({
-            type: 'GET',
-            url: "{% url 'home' %}",
-            data: {"product_id": product_id},
-            success: function (response) {
-                new_price = parseInt(response["price"]) + parseInt(total_price.getAttribute("data-id"))
-                total_price.setAttribute("data-id", new_price)
-                total_price.innerHTML = new_price + " <span> UZS</span>"
-                home_price.innerHTML = new_price + " <span> UZS</span>"
-                orders.innerHTML += '<div class="row"><div class="col-12"><div class="item"><div class="box"><div class="box__img"> <img class="img" src="/media/'+ response["image"] +'" alt=""></div><div class="box__content"><div class="box__title">'+ response["name"] +'</div><div class="box__text">'+ response["description"] +'</div><div class="box__const"><div class="box__cost">'+ response["price"] +' UZS</div></div></div></div></div></div></div>';
-            },
-            error: function (response) {
-                console.log(response)
-            }
-        })
-  }
-  function delete_orders(){
-      orders = document.getElementById("order-list");
-      total_price = document.getElementById("total_price");
-      home_price = document.getElementById("home_price");
-
-      orders.innerHTML = "";
-      total_price.innerHTML = "0 <span> UZS</span>";
-      home_price.innerHTML = "0 <span> UZS</span>";
-
-      total_price.setAttribute("data-id", 0);
-
-  }
-</script>
+    <script src="assets/js/app.js"> </script>
   </body>
 </html>
