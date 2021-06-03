@@ -1,7 +1,7 @@
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
 from max_way.models import *
-from max_way.services import *
+from .services import *
 from .forms import *
 from django.shortcuts import render, redirect
 
@@ -11,23 +11,40 @@ def login_required_decorator(f):
 
 
 @login_required_decorator
+def status(request, pk, status):
+    model = Order.objects.get(id=pk)
+    model.status = status
+    model.save()
+    return redirect("order_list")
+
+
+@login_required_decorator
 def dashboard_page(request):
-    # categories = servises.get_categories_news_count()
-    # categories_count=servises.get_categories_count()
-    # authors_count=servises.get_categories_count()
-    # news_count=servises.get_news_count()
-    # references_count=servises.get_references_count()
-    # views=servises.get_views()
-    # print(views)
-    # ctx = {
-    #     "categories": categories,
-    #     "categories_count":categories_count,
-    #     "authors_count":authors_count,
-    #     "news_count":news_count,
-    #     "references_count":references_count,
-    #     "views": views
-    # }
-    return render(request, 'dashboard/index.html')
+    status = get_status_info([1, 2, 3])
+    stat_1 = get_status_1()[0]['count']
+    stat_2 = get_status_2()[0]['count']
+    stat_3 = get_status_3()[0]['count']
+    categories = get_categories_products_count()
+    categories_count = get_categories_count()
+    products_count = get_products_count()
+    users_count = get_users_count()
+
+    statuses = {
+        "order": stat_1,
+        "done": stat_2,
+        "failed": stat_3,
+    }
+
+    ctx = {
+        "categories": categories,
+        "categories_count": categories_count,
+        "products_count": products_count,
+        "users_count": users_count,
+        "statuses": statuses,
+        "status": status,
+
+    }
+    return render(request, 'dashboard/index.html', ctx)
 
 
 def dashboard_login(request):
@@ -46,6 +63,7 @@ def dashboard_logout(request):
     return redirect('login')
 
 
+@login_required_decorator
 def category_list(request):
     categories = get_categories()
     ctx = {
@@ -54,6 +72,7 @@ def category_list(request):
     return render(request, 'dashboard/category/list.html', ctx)
 
 
+@login_required_decorator
 def category_create(request):
     model = Category()
     form = CategoryForm(request.POST, instance=model)
@@ -69,6 +88,7 @@ def category_create(request):
     return render(request, 'dashboard/category/form.html', ctx)
 
 
+@login_required_decorator
 def category_edit(request, category_id):
     model = Category.objects.get(id=category_id)
     form = CategoryForm(request.POST or None, instance=model)
@@ -84,12 +104,14 @@ def category_edit(request, category_id):
     return render(request, 'dashboard/category/form.html', ctx)
 
 
+@login_required_decorator
 def category_delete(request, category_id):
     model = Category.objects.get(id=category_id)
     model.delete()
     return redirect("category_list")
 
 
+@login_required_decorator
 def product_list(request):
     products = get_products()
     ctx = {
@@ -98,9 +120,10 @@ def product_list(request):
     return render(request, 'dashboard/product/list.html', ctx)
 
 
+@login_required_decorator
 def product_create(request):
     model = Product()
-    form = ProductForm(request.POST,request.FILES, instance=model)
+    form = ProductForm(request.POST, request.FILES, instance=model)
     if request.POST:
         if form.is_valid():
             model.save()
@@ -113,9 +136,10 @@ def product_create(request):
     return render(request, 'dashboard/product/form.html', ctx)
 
 
+@login_required_decorator
 def product_edit(request, product_id):
     model = Product.objects.get(id=product_id)
-    form = ProductForm(request.POST or None, request.files, instance=model)
+    form = ProductForm(request.POST or None, request.FILES, instance=model)
     if request.POST:
         if form.is_valid():
             model.save()
@@ -129,63 +153,39 @@ def product_edit(request, product_id):
     return render(request, 'dashboard/product/form.html', ctx)
 
 
+@login_required_decorator
 def product_delete(request, product_id):
     model = Product.objects.get(id=product_id)
     model.delete()
     return redirect('product_list')
 
 
-def order_list(request):
-    orders = get_order()
-    ctx = {
-        "orders": orders
-    }
-    return render(request, 'dashboard/order/list.html',ctx)
-
-
-def order_create(request):
-    model = Order()
-    form = OrderForm(request.POST, instance=model)
-    if request.POST:
-        if form.is_valid():
-            model.save()
-            return redirect('order_list')
-        else:
-            print(form.errors)
-    ctx = {
-        "form": form
-    }
-    return render(request, 'dashboard/order/form.html', ctx)
-
-
-def order_edit(request, order_id):
-    model = Order.objects.get(id=order_id)
-    form = OrderForm(request.POST or None, instance=model)
-    if request.POST:
-        if form.is_valid():
-            model.save()
-            return redirect('order_list')
-        else:
-            print(form.error)
-    ctx = {
-        'form': form
-
-    }
-    return render(request, 'dashboard/order/form.html', ctx)
-
-
-def order_delete(request, order_id):
-    model = Order.objects.get(id=order_id)
-    model.delete()
-    return redirect('order_list')
-
-
 def user_list(request):
-    users = get_order()
+    users = get_user()
     ctx = {
         "users": users
     }
     return render(request, 'dashboard/user/list.html', ctx)
+
+
+@login_required_decorator
+def order_list(request):
+    status = get_status_info([1, 2, 3])
+    filter = "all"
+    if request.POST:
+        filter = request.POST.get("order_filter")
+
+        if filter == "done":
+            status = get_status_info([2])
+
+        if filter == "failed":
+            status = get_status_info([3])
+
+    ctx = {
+        "status": status,
+        "filter": filter,
+    }
+    return render(request, 'dashboard/order/list.html', ctx)
 
 
 def user_create(request):

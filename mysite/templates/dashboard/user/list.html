@@ -9,7 +9,7 @@
       </div>
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
-          <li class="breadcrumb-item"><a href="{%url 'dashboard' %}">Home</a></li>
+          <li class="breadcrumb-item"><a href="{% url 'dashboard' %}">Home</a></li>
           <li class="breadcrumb-item active">User List</li>
         </ol>
       </div>
@@ -22,10 +22,10 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">User Lists</h3>
+                <h3 class="card-title">Responsive Hover Table</h3>
 
                 <div class="card-tools">
-                    <div class="btn btn-block btn-success"><a href="{% url 'user_add' %}">Add</a></div>
+                    <a href="{% url 'user_add' %}"><div class="btn btn-block btn-success">Add</div></a>
                 </div>
               </div>
               <!-- /.card-header -->
@@ -33,9 +33,10 @@
                 <table class="table table-hover text-nowrap">
                   <thead>
                     <tr>
-                      <th>#</th>
-                      <th>Fist_Name</th>
-                      <th>Date</th>
+                      <th>№</th>
+                      <th>First_name</th>
+                      <th>Phone_number</th>
+                      <th>Created_at</th>
                       <th>Edit</th>
                       <th>Delete</th>
                     </tr>
@@ -45,9 +46,10 @@
                     <tr>
                       <td>{{ forloop.counter }}</td>
                       <td>{{ user.first_name }}</td>
-                      <td>{{ category.created_at }}</td>
-                      <td><div class="btn btn-block btn-warning"><a href="{% url 'user_edit' user_id=user.id %}">Edit</a></div></td>
-                      <td><div class="btn btn-block btn-danger"><a href="{% url 'user_delete' user_id=user.id %}">Delete</a></div></td>
+                      <td>{{ user.phone }}</td>
+                      <td>{{ user.created_at }}</td>
+                      <td><a href="{% url 'user_edit' user_id=user.id %}"><div class="btn btn-block btn-primary">Edit</div></a></td>
+                      <td><a href="{% url 'user_delete' user_id=user.id %}"><div class="btn btn-block btn-danger">Delete</div></a></td>
                     </tr>
                     {% endfor %}
                   </tbody>
@@ -61,4 +63,3 @@
     </div>
 </section>
 {% endblock %}
-

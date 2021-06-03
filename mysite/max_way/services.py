@@ -21,7 +21,7 @@ def get_product_by_id(product_id):
         cursor.execute("""select id, name,description, image, price from max_way_product where id = %s""",
                        [product_id]
                        )
-        product = dict_fetchall(cursor)
+        product = dict_fetchone(cursor)
         return product
 
 
@@ -37,6 +37,25 @@ def get_order():
         cursor.execute("""select * from max_way_order""")
         orders = dict_fetchall(cursor)
         return orders
+
+
+
+def get_order_max_id():
+    with closing(connection.cursor()) as cursor:
+        cursor.execute("""select max(id) from max_way_order""")
+        order_id = dict_fetchone(cursor)
+    return order_id
+
+
+
+
+def get_product_price(pk):
+    with closing(connection.cursor()) as cursor:
+        cursor.execute("""select price from max_way_product where id = %s""", [pk])
+        price = dict_fetchone(cursor)
+    return price
+
+
 
 
 def dict_fetchall(cursor):

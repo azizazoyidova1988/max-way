@@ -32,11 +32,13 @@ class Product(models.Model):
         return self.name
 
 class Order(models.Model):
-    products = models.ManyToManyField(Product)
+    products = models.JSONField(blank=True, null=True)
     all_price = models.IntegerField(blank=False, null=False, default=0)
-    status = models.IntegerField(blank=False, null=False, default=0)
+    status = models.IntegerField(blank=True, null=True, default=1)
     created_at = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return self.products
 
 class User(models.Model):
     first_name = models.TextField(max_length=100, blank=False, null=False)

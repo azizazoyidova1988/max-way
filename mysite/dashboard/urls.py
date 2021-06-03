@@ -16,10 +16,10 @@ urlpatterns = [
     path('product/<int:product_id>/edit/', views.product_edit, name="product_edit"),
     path('product/<int:product_id>/delete/', views.product_delete, name="product_delete"),
 
-    path('order_list/', views.order_list, name='order_list'),
-    path('order/add/', views.order_create, name="order_add"),
-    path('order/<int:order_id>/edit/', views.order_edit, name="order_edit"),
-    path('order/<int:order_id>/delete/', views.order_delete, name="order_delete"),
+    path("status/<int:pk>/<int:status>", views.status, name="status"),
+
+    path('status/list/', views.order_list, name='order_list'),
+
 
     path('user_list/', views.user_list, name='user_list'),
     path('user/add/', views.user_create, name="user_add"),

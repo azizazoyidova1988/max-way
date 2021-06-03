@@ -3,7 +3,8 @@ from . import views
 
 urlpatterns = [
     path('', views.home, name="home"),
-    path('order/', views.order, name="order"),
+    path('<int:order_id>/order/', views.order, name="order"),
+    path('order/save/', views.order_save, name="order-save"),
     path('dashboard/', include('dashboard.urls'))
 
 ]
