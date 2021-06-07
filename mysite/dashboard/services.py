@@ -46,6 +46,8 @@ def get_status_2():
         status = dict_fetchall(cursor)
     return status
 
+# select max_way_order.id , js.key, js.value
+# from max_way_order, json_each_integer(max_way_order.products) as js
 
 def get_status_3():
     with closing(connection.cursor()) as cursor:
